@@ -24,7 +24,7 @@ function initialise_document_ready_functions()
     initialise_submenu_functionality();
 
     // Initialise Top Banner Carousel (Owl Carousel)
-    /*var top_banner_carousel = $("#top-banner-carousel");
+    var top_banner_carousel = $("#top-banner-carousel");
     if (top_banner_carousel.length > 0)
     {
         top_banner_carousel.owlCarousel({
@@ -56,9 +56,9 @@ function initialise_document_ready_functions()
             });  
         }
         
-    }*/
+    }
 
-    /*// Initialise Affiliates Slider 2 Columns (Owl Carousel)
+    // Initialise Affiliates Slider 2 Columns (Owl Carousel)
     var affiliates_carousel_2cols = $("#affiliates-slider-2cols");
     if (affiliates_carousel_2cols.length > 0)
     {
@@ -95,8 +95,8 @@ function initialise_document_ready_functions()
             autoHeight : true
         }); 
     }
-*/
- /*   // Initialise Full Page Content Slider
+
+    // Initialise Full Page Content Slider
     var full_page_content_slider = $("#full-page-content-slider");
     if (full_page_content_slider.length > 0)
     {
@@ -127,13 +127,13 @@ function initialise_document_ready_functions()
                 full_page_content_slider.trigger('owl.prev');
             }); 
         }
-    }*/
+    }
 
     // initialise form validation and submit functions 
     validate_and_submit_forms();
 
-/*    // initialise menu search Icon visiblity / click actions
-    mainmenu_search_icon();*/
+    // initialise menu search Icon visiblity / click actions
+    mainmenu_search_icon();
 
     /* 
      * ----------------------------------------------------------

@@ -80,13 +80,13 @@ function initialise_main_menu_horizontal_functionality()
                         $(this).children(".sub-menu").removeClass("menu_on_the_left").addClass("menu_on_the_right");
                     }
                     $(this).addClass("active");
-                    $(this).children(".sub-menu").fadeIn(100).css({ "z-index":"105" });
+                    $(this).children(".sub-menu").fadeIn().css({ "z-index":"105" });
                     $(this).parents(".sub-menu").css({ "z-index":"100" });
                 },
                 function()
                 {
                     $(this).removeClass("active");
-                    $(this).children(".sub-menu").fadeOut(100);
+                    $(this).children(".sub-menu").fadeOut("fast");
                 }
             );
             // end: submenu menu items
@@ -97,12 +97,12 @@ function initialise_main_menu_horizontal_functionality()
                 function()
                 {
                   $(this).addClass("active");
-                  $(this).children(".sub-menu").fadeIn(100);
+                  $(this).children(".sub-menu").fadeIn();
                 }, 
                 function()
                 {
                   $(this).removeClass("active");
-                  $(this).children(".sub-menu").fadeOut(100);
+                  $(this).children(".sub-menu").fadeOut("fast");
                 }
               );
           }
@@ -206,7 +206,7 @@ function initialise_main_menu_mobile_functionality()
                     // if link is empty, close submenus
                     if ($(this).attr("href") == "#")
                     {
-                        parent_menu_item.find(".sub-menu:visible").slideUp(100, function()
+                        parent_menu_item.find(".sub-menu:visible").slideUp("fast", function()
                         {
                             parent_menu_item.removeClass("active");
                             parent_menu_item.find(".sub-menu li.menu-item").removeClass("active");
@@ -227,7 +227,7 @@ function initialise_main_menu_mobile_functionality()
                 // if submenu is hidden, show it
                 else 
                 {
-                    parent_menu_item.children(".sub-menu").slideDown(100, function()
+                    parent_menu_item.children(".sub-menu").slideDown("", function()
                     {
                         parent_menu_item.addClass("active");
                         event.preventDefault();
@@ -274,7 +274,7 @@ function initialise_submenu_functionality()
                 // if link is empty, close submenus
                 if ($(this).attr("href") == "#")
                 {
-                    parent_menu_item.find(".sub-menu:visible").slideUp(100, function()
+                    parent_menu_item.find(".sub-menu:visible").slideUp("fast", function()
                     {
                         parent_menu_item.removeClass("active");
                         parent_menu_item.find(".sub-menu li.menu-item").removeClass("active");
@@ -300,7 +300,7 @@ function initialise_submenu_functionality()
                     parent_menu_item.addClass("active");
 
                     // hide other open submenus
-                    $(this).parent(".menu-item").siblings().find(".sub-menu:visible").slideUp(100, function()
+                    $(this).parent(".menu-item").siblings().find(".sub-menu:visible").slideUp("fast", function()
                     {
                         $(this).parent(".menu-item").removeClass("active");
                         event.preventDefault();
