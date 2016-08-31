@@ -1,0 +1,9 @@
+https://github.com/sillylogger/jekyll-directory
+https://github.com/zroger/jekyll-less
+https://github.com/tuananh/ArchiveGenerator
+
+TODO:
+https://github.com/webchef/jekyll-umlauts
+https://github.com/tkareine/jekyll-minibundle
+
+http://jch.penibelst.de/

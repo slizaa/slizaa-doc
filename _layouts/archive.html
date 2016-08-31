@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+{% include base.html %}
+
+<div class="container-fluid horizontal-section-container clearfix">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="section-container main-page-content clearfix">
+        <div class="section-content">
+
+          <h1> Blog-Archiv {% if page.period["month"] != nil %} {{ page.period["month"] }} - {% endif %} {{page.period["year"]}} </h1>
+
+          {% for post in page.period_posts reversed %}
+          {% unless post.next %}
+          <h3>{{ post.date | date: '%Y %b' }}</h3>
+          {% else %}
+          {% capture currPostDate %}{{ post.date | date: '%Y %b' }}{% endcapture %}
+          {% capture nextPostDate %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
+          {% if currPostDate != nextPostDate %}
+          <h3>{{ post.date | date: '%Y %b' }}</h3>
+          {% endif %}
+          {% endunless %}
+
+          <div>{{ post.date | date: '%b %d' }} - <a href="{{post.url}}">{{ post.title }}</a></div>
+          {% endfor %}
+
+        </div><!-- .section-content -->
+      </div><!-- .section-container -->
+      <!-- End: Main Blog Items -->
+    </div><!-- .col-sm-9 -->
+
+    <div class="col-sm-3"><!-- .col-sm-3 -->
+      {% include i_blog-sidebar.html %}
+    </div><!-- .col-sm-3 -->
+
+  </div><!-- .row -->
+</div><!-- .container-fluid -->
+<!-- End: Section 2 -->

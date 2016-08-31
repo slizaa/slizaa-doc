@@ -1,0 +1,224 @@
+@import "colour-definition.less";
+
+@media (min-width: 768px) {
+  .background-body {
+    /* background-image: url(../images/design/background.png); */
+    background-color: @colour-12;
+  }
+}
+
+.menu-item > a > i {
+  padding-right: 8px;
+}
+
+.beneath-footer-right {
+  text-align: right;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 6px;
+  font-size: 12px;
+}
+
+.breadcrumb > li + li::before {
+  font-family: "open_sansregular",sans-serif !important;
+  color: @colour-white !important;
+}
+
+.breadcrumb > li > a {
+  font-family: "open_sansregular",sans-serif !important;
+  color: @colour-white !important;
+}
+
+.isolated-sections #breadcrumbs-container {
+  background: @colour-logo-dark none repeat scroll 0% 0%;
+}
+
+div.shadow {
+/* -webkit-box-shadow: 5px 5px 10px lightgrey;
+  -moz-box-shadow:    5px 5px 10px lightgrey;
+  box-shadow: 5px 5px 10px grey; */
+}
+
+h1.page_title {
+  font-size: 1.8em;
+}
+
+.blog-article .title {
+  font-size: 1.6em;
+}
+
+ul.blog-tag-list>li>a {
+  border-radius: 5px;
+}
+
+.reference-item {
+    padding: 5px;
+}
+
+.reference-item-border {
+    border:1px solid @colour-medium-light;
+    width: 100%;
+    overflow: hidden;
+    text-align:center;
+    border-radius: 10px;
+}
+
+.reference-item img {
+    margin: 0px;
+    padding: 0px;
+    vertical-align: middle;
+    horiz-align: center;
+    height: 100%;
+    width: auto;
+}
+
+.footer-contact {
+  border-radius: 20px 20px 20px 20px !important;
+}
+
+.footer-contact-item {
+    margin: 0px;
+    padding: 0px;
+}
+
+.date_block {
+    display: inline-block;
+    font-family: "open_sanssemibold",sans-serif;
+    font-weight: normal;
+    color: @colour-really-dark;
+    background: transparent none repeat scroll 0% 0%;
+}
+
+.section-header.with-icon {
+    margin-bottom: 15px;
+}
+
+.kontakt_block {
+    display: inline-block;
+    font-family: "open_sansbold",sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: @colour-medium;
+    border: solid @colour-medium thin;
+    font-size: 0.71em;
+    line-height: 1;
+    padding: 4px 10px;
+    margin-bottom: 7px;
+}
+
+.reference-grid {
+    margin-top: 15px !important;
+}
+
+
+.custom-bullet li {
+    display: block;
+}
+
+div.schulung-inhouse-kontakt a:hover {
+  color: @colour-black;
+}
+
+ul.schulung {
+
+  &.inhalt_1 {
+    margin-top: 5px;
+  }
+
+  &.inhalt_2 {
+    margin-top: 0px;
+  }
+}
+
+ul.posts > li {
+
+  display: block;
+  margin: 0px !important;
+
+  &:before {
+    content: "\e080";
+    font-family: 'Glyphicons Halflings';
+    font-size: 9px;
+    float: left;
+    margin-top: 4px;
+    margin-left: -17px;
+    /* hard-coded grey*/
+    color: #aaaaaa;
+  }
+}
+
+li.schulung {
+
+    display: block;
+    margin: 0px !important;
+
+    &:before
+    {
+        /*Using a Bootstrap glyphicon as the bullet point*/
+        content: "\e080";
+        font-family: 'Glyphicons Halflings';
+        font-size: 9px;
+        float: left;
+        margin-top: 4px;
+        margin-left: -17px;
+        /* hard-coded grey*/
+        color: #aaaaaa;
+    }
+}
+
+.schulung {
+
+  &.banner {
+    background: @colour-logo-light none repeat scroll 0% 0%;
+    color: @colour-white;
+    padding: 1.75rem;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-family: 'open_sansbold';
+    border-radius: 10px;
+  }
+
+    &.text {
+        margin-bottom: 7px;
+    }
+
+    &.datum {
+        background: @colour-logo-light none repeat scroll 0% 0%;
+        background-color: @colour-logo-light !important;
+        display: block @colour-logo-light;
+        float: left;
+        margin-right: 18px;
+        padding: 7px 4px;
+        min-width: 35px;
+        text-align: center;
+        transition: all 0.4s ease 0s;
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    &.tag {
+        display: block;
+        font-size: 1.1em;
+        line-height: 0.95;
+        margin-bottom: 5px;
+        font-family: "open_sanssemibold",sans-serif;
+        color: @colour-white !important;
+    }
+
+    &.monat {
+        display: block;
+        font-size: 1.0em;
+        line-height: 1.0;
+        font-family: "open_sansbold",sans-serif;
+        color: @colour-logo-dark !important;
+    }
+
+    &.titel {
+        padding-top:  10px;
+        color: @colour-really-dark !important;
+    }
+}
+
+

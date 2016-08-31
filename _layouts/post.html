@@ -1,0 +1,39 @@
+---
+layout: default_full
+---
+<!-- Main Blog Items -->
+<div class="section-container main-page-content clearfix">
+
+    <div class="section-content">
+        <article class="blog-article clearfix">
+            <div class="blog-article-content clearfix">
+
+                <h1 class="page_title">Blog</h1>
+
+                <h1 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+
+                <div class="meta clearfix">
+                    <div class="meta-item posted-by"><span class="glyphicon glyphicon-user"></span>
+                        Von Gerd W&uuml;therich
+                    </div>
+                    <div class="meta-item date"><span class="glyphicon glyphicon-time"></span> {{ page.date | date: '%B %d, %Y'}}
+                    </div>
+                </div>
+
+                <article class="post-content">
+                    {{ content }}
+                </article>
+
+                <div class="meta footer clearfix">
+                    <ul class="meta-item tags clearfix">
+                        <li class="icon"><span class="glyphicon glyphicon-tag"></span></li>
+                        {% for tag in page.tags %}
+                        <li><a href="#">{{ tag }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </div><!-- .blog-article-content -->
+        </article><!-- .blog-article -->
+    </div>
+</div>

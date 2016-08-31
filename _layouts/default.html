@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body class="background-body isolated-sections loader-bar">
+
+<!-- Page Outer Container -->
+<div class="outer-container clearfix">
+
+    <div class="shadow">
+        {% include header.html %}
+    </div>
+
+    <!-- =========== Page Body Inside Content =========== -->
+    <div class="inside-body-content-container clearfix">
+
+
+        <div class="shadow">
+            {% include breadcrumb.html %}
+            {{ content }}
+        </div>
+
+        <div class="shadow">
+            {% include footer.html %}
+        </div>
+
+    </div><!-- .inside-body-content-container -->
+    <!-- End: Page Body Inside Content -->
+
+
+    {% include footer-beneath.html %}
+    {% include footer-js.html %}
+
+</div><!-- .outer-container -->
+<!-- End: Page Outer Container -->
+
+</body>
+
+</html>

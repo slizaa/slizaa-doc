@@ -1,0 +1,48 @@
+<!-- =========== Section: Breadcrumbs =========== -->
+
+{% include base.html %}
+
+<div id="breadcrumbs-container" class="container-fluid horizontal-section-container hidden-xs clearfix">
+    <div class="row">
+        <div class="col-xs-12">
+            <ol class="breadcrumb">
+                <li><a href="{{ base }}/blog">Home</a></li>
+                {% capture page_url_without_index_html %}{{ page.url | remove: "/index.html" }}{% endcapture %}
+                {% if page.url contains '/index.html' %}
+
+                    {% assign splitted_url_parts = page_url_without_index_html | split: '/' %}
+                    {% capture forLoopMaxInt %}{{ splitted_url_parts.size | minus:1 }}{% endcapture %}
+                    {% for i in (1..forLoopMaxInt) %}
+                    {% capture current_breadcrumb_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}/index.html{% endcapture %}
+                    {% capture current_breadcrumb_md_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}/{% endcapture %}
+                    {% capture next_prepender %}{{next_prepender}}/{{ splitted_url_parts[i] }}{% endcapture %}
+                    {% for breadcrumb_page in site.pages %}{% if current_breadcrumb_url == breadcrumb_page.url or current_breadcrumb_md_url == breadcrumb_page.url  %}
+                    <li {% if i == forLoopMaxInt %}class="active"{% endif %}>
+                        {% capture breadcrumb_page_page_url_without_index_html %}{{ breadcrumb_page.url | remove: "index.html" }}{% endcapture %}
+                        <a href="{{ base }}{{breadcrumb_page_page_url_without_index_html}}">{{breadcrumb_page.breadcrumb}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+
+                {% else %}
+                    {% if page.url contains 'blog/page'%}
+                        <li><a href="{{ base }}/blog" class="active">Blog</a></li>
+                    {% else %}
+                        {% assign crumbs = page.url   | split: '/' %}
+                        {% assign crumb_limit = crumbs  | size | minus: 3 %}
+                        {% for crumb in crumbs limit: crumb_limit offset: 1%}
+                        <li>
+                            <a href="{{ base }}{% assign limit = forloop.index | plus: 1%}{% for crumb in crumbs limit: limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' | capitalize }}</a>
+                        </li>
+                        {% endfor %}
+                        <li>
+                            <a href="{{ page.url }}" class="active">{{ page.title }}</a>
+                        </li>
+                    {% endif %}
+                {% endif %}
+            </ol>
+        </div>
+    </div>
+</div>
+<!-- End: Section: Breadcrumbs -->
+
