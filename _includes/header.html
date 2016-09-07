@@ -5,8 +5,7 @@
 <header class="clearfix">
 
     <div class="logo">
-        <a href="index.html"><img src="{{base}}/images/design/slizaa-logo.svg" alt="gerd-wuetherich.de" width="700" height="222"></a>
-        <div class="logo-text">Your personal Architecture Workbench</div>
+        <a href="index.html"><img src="{{base}}/images/design/slizaa-logo.svg" alt="gerd-wuetherich.de" width="220"></a>
     </div><!-- .logo -->
 
     <div id="main-menu-container" class="clearfix">
@@ -15,16 +14,16 @@
                 class="glyphicon glyphicon-th"></span></div>
 
         <ul id="main-menu">
-            <li class="menu-item {% if current[1] == 'index.html' %}current-menu-ancestor{% endif %}"><a href="{{base}}"><i class="fa fa-home fa-lg"></i>Home</a></li>
-            <li class="menu-item {% if current[1] == 'referenzen' %}current-menu-ancestor{% endif %}"><a href="{{base}}/referenzen"><i class="fa fa-terminal fa-lg"></i>Get started</a></li>
-            <li class="menu-item"><a href="{{base}}/schulungen/osgi"><i class="fa fa-book fa-lg"></i>Documentation</a>
-                <!--<ul class="sub-menu">
-                    <li class="menu-item"><a href="{{base}}/schulungen/osgi">OSGi-Einführung</a></li>
-                </ul>-->
+            <li class="menu-item {% if current[1] == 'index.html' %}current-menu-ancestor{% endif %}"><a href="{{base}}/index.html"><i class="fa fa-home "></i>Home</a></li>
+<!--            <li class="menu-item {% if current[1] == 'getstarted' %}current-menu-ancestor{% endif %}"><a href="{{base}}/getstarted"><i class="fa fa-terminal "></i>Get started</a></li>
+            <li class="menu-item {% if current[1] == 'documentation' %}current-menu-ancestor{% endif %}"><a href="{{base}}/documentation"><i class="fa fa-book "></i>Documentation</a></li> -->
+            <li class="menu-item {% if current[1] == 'download' %}current-menu-ancestor{% endif %} menu-item-download"><a href="{{base}}/download"><i class="fa fa-download "></i>Download</a></li>
+            <li class="menu-item {% if current[1] == 'kontakt' %}current-menu-ancestor{% endif %}"><a href="#"><i class="fa fa-code-fork "></i>Get involved</a>
+                <ul class="sub-menu">
+                    <li class="menu-item"><a target="_blank" href="https://github.com/slizaa/slizaa">Source code</a></li>
+                    <li class="menu-item"><a target="_blank" href="https://github.com/slizaa/slizaa/issues">Issue tracker</a></li>
+                </ul>
             </li>
-            <li class="menu-item {% if current[1] == 'download' %}current-menu-ancestor{% endif %} menu-item-download"><a href="{{base}}/download"><i class="fa fa-download fa-lg"></i>Download</a></li>
-            <li class="menu-item {% if current[1] == 'kontakt' %}current-menu-ancestor{% endif %}"><a href="{{base}}/kontakt"><i class="fa fa-code-fork fa-lg"></i>Get involved</a></li>
-
 
         </ul><!-- #main-menu -->
 

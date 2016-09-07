@@ -1,5 +1,46 @@
 ---
-layout: default
+layout: default_full
 ---
 
 {% include base.html %}
+
+
+<!-- =========== Section 1: Carousel =========== -->
+<h1><b>What is</b> slizaa?</h1>
+
+<div id="top-banner" class="container-fluid carousel-container no-shadow ">
+
+
+        <div class="col-xs-12 col-md-5">
+            <div><b>Slizaa</b> is an interactive and customizable software architecture workbench, that allows you to explore and visualize the structure and the dependencies of your software system.</div>
+            <br/>
+            <div><b>Slizaa</b> uses <a target="_blank" href="http://neo4j.com/developer/get-started/">Neo4j</a>/<a target="_blank" href="http://jqassistant.org/">jQAssistant</a> and provides a front end with a bunch of specific tools and viewers to provide an easy-to-use in-depth insight of your software's architecture.</div>
+
+            <div class="pull-center">
+                <a class="btn btn-lg btn-primary" href="{{base}}/getstarted/index.html"><i class="fa fa-terminal "></i>Get started!</a>
+                <a class="btn btn-lg btn-primary" href="{{base}}/download/index.html"><i class="fa fa-download "></i>Download</a>
+            </div>
+        </div><!-- .col-xs-5 -->
+
+        <div class="col-xs-12 col-md-7">
+
+            <div id="top-banner-carousel" class="owl-carousel owl-theme full-page-image-slider">
+
+                <div class="item">
+                    <img class="lazyOwl" data-src="images/carousel/slizaa_1.png" src="#" alt="Wheat harvest">
+                </div>
+
+                <div class="item">
+                    <img class="lazyOwl" data-src="images/carousel/slizaa_2.png" src="#" alt="Wheat harvest">
+                </div>
+
+            </div><!-- #top-banner-carousel -->
+
+            <!-- banner navigation arrows - comment out to de-activate -->
+            <div class="slider-nav slider-nav-left"><i class="fa fa-angle-left"></i></div>
+            <div class="slider-nav slider-nav-right"><i class="fa fa-angle-right"></i></div>
+
+        </div><!-- .col-xs-5 -->
+
+</div><!-- #top-banner -->
+<!-- End: Section 1: Carousel -->

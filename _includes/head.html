@@ -8,13 +8,17 @@
   <title>Slizaa</title>
 
   <!-- favicon -->
-  <link rel="icon" type="image/png" href="images/temp/favicon.png">
+  <link rel="icon" type="image/x-icon" href="{{base}}/images/temp/favicon.ico">
 
   <!-- Bootstrap CSS -->
   <link href="{{base}}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Plugins CSS -->
   <link href="{{base}}/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="{{base}}/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+  <link href="{{base}}/plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+  <link href="{{base}}/plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+  <link href="{{base}}/plugins/lightbox/css/lightbox.css" rel="stylesheet">
 
   <!-- Theme CSS -->
   <link href="{{base}}/css/style-theme.css" rel="stylesheet">
@@ -27,8 +31,13 @@
   <!-- Custom Theme CSS -->
   <link href="{{base}}/css/styles.css" rel="stylesheet">
 
-  <!-- recaptcha -->
-  <script src='https://www.google.com/recaptcha/api.js'></script>
+  {% capture page_ext %}{{ page.path | split: "." | last }}{% endcapture %}
+  {% if page_ext == "adoc" %}
+  <link rel="stylesheet" href="{{base}}/css/coderay.css" media="screen" type="text/css">
+  {% endif %}
+
+  <!-- recaptcha
+  <script src='https://www.google.com/recaptcha/api.js'></script>-->
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

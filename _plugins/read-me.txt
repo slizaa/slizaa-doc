@@ -1,9 +1,10 @@
 https://github.com/sillylogger/jekyll-directory
-https://github.com/zroger/jekyll-less
+https://github.com/zroger/jekyll-less [fixed, see here: https://github.com/stereobooster/jekyll-press/issues/30]
 https://github.com/tuananh/ArchiveGenerator
+
+
+http://haochenxie.name/articles/software-engineering/Enabling-AsciiDoc-for-Jekyll
 
 TODO:
 https://github.com/webchef/jekyll-umlauts
-https://github.com/tkareine/jekyll-minibundle
-
 http://jch.penibelst.de/

@@ -1,9 +1,14 @@
 # Site settings
 url: http://www.slizaa.org
 
+#
+asciidoctor:
+  attributes:
+    - source-highlighter=coderay
+
 # Build settings
 markdown: kramdown
 exclude: [gerd-wuetherich.de.iml]
 paginate: 2
 paginate_path: "/blog/page:num/"
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, jekyll-asciidoc]
