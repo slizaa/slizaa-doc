@@ -3,8 +3,9 @@ url: http://www.slizaa.org
 
 #
 asciidoctor:
+  template_dir: _templates
   attributes:
-    - source-highlighter=coderay
+    - source-highlightercoderay
 
 # Build settings
 markdown: kramdown

@@ -2,9 +2,14 @@ https://github.com/sillylogger/jekyll-directory
 https://github.com/zroger/jekyll-less [fixed, see here: https://github.com/stereobooster/jekyll-press/issues/30]
 https://github.com/tuananh/ArchiveGenerator
 
-
-http://haochenxie.name/articles/software-engineering/Enabling-AsciiDoc-for-Jekyll
-
 TODO:
 https://github.com/webchef/jekyll-umlauts
 http://jch.penibelst.de/
+
+asciidoc:
+http://haochenxie.name/articles/software-engineering/Enabling-AsciiDoc-for-Jekyll
+http://eshepelyuk.github.io/2014/11/06/advanced-jekyll-and-asciidoctor.html
+https://github.com/asciidoctor/jekyll-asciidoc#customizing-the-generated-html
+http://discuss.asciidoctor.org/Solved-Custom-style-on-title-heading-element-td4543.html#a4547
+
+https://github.com/asciidoctor/jekyll-asciidoc/issues/37

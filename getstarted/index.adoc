@@ -1,33 +1,54 @@
----
-layout: default_full
----
+= Get started
+:page-layout: asciidoc
+:header_footer: false
 
-== *Getting* started
-:uri-asciidoctor: http://asciidoctor.org
+== Get started
 
-This is a sample page composed in AsciiDoc.
-Jekyll converts it to HTML using {uri-asciidoctor}[Asciidoctor].
+Slizaa allows you to inspect and visualize the structure of an application, but it does neither scan nor store the structural information by itself. Instead, it uses jQAssistant (which in turn uses Neo4J)
+as it's backend. In order to setup slizaa, you First have to install and run jQAssistant (that is part 1 of this guide). Once jQAssistant is up and
+running, you can start slizaa and connect against the running jQAssistant server (that's part 2 of this guide).
 
-[source,ruby]
- class LessCssGenerator < Jekyll::Generator
-      safe true
-      # Initialize options from site config.
-      def initialize(config = {})
-        @options = config["less"] ||= {"compress" => true}
-      end
-      # Jekyll will have already added the *.less files as Jekyll::StaticFile
-      # objects to the static_files array.  Here we replace those with a
-      # LessCssFile object.
-      def generate(site)
-        site.static_files.clone.each do |sf|
-          if sf.kind_of?(Jekyll::StaticFile) && sf.path =~ /\.less$/
-            site.static_files.delete(sf)
-            name = File.basename(sf.path)
-            destination = File.dirname(sf.path).sub(site.source, '')
-            less_file = LessCssFile.new(site, site.source, destination, name)
-            less_file.compress = @options["compress"]
-            site.static_files << less_file
-          end
-        end
-      end
-    end
+image::images/getting-started-1.svg[]
+
+== Part 1: Install and run jQAssistant
+
+=== Install jQAssistant
+
+Download the latest jQAssistant distribution http://asciidoctor.org[here]. The archive contains a directory 'jqassistant.distribution-1.1.3' that must be unpacked in an arbitrary folder on your local disc.
+
+=== Scan you application
+Put all the JAR files (or WAR files) that belong to your application in the '<jQAssistant_install_dir>/lib' folder. The JAR files will be scanned during the scanning process using the following command.
+The structural information will be stored in a Neo4J graph database that is located in the specified directory (e.g. 'jqassistant/myExampleDB').
+
+[square]
+* _Windows_
+[source,shell]
+ .\bin\jqassistant.cmd scan -f lib -s .\jqassistant\myExampleDB
+
+ * _Linux_
+[source,shell]
+ ./bin/jqassistant.sh scan -f lib -s jqassistant/myExampleDB
+
+=== Enrich your application model
+[square]
+ * _Windows_
+[source,shell]
+.\bin\jqassistant.cmd analyze -concepts classpath:Resolve -s jqassistant/myExampleDB
+
+ * _Linux_
+[source,shell]
+./bin/jqassistant.sh analyze -concepts classpath:Resolve -s jqassistant/myExampleDB
+
+=== Start the jQAssistant server
+Now you are ready to launch the jQAssistent server that hosts the structural information of the scanned application.
+
+[square]
+ * _Windows_
+[source,shell]
+.\bin\jqassistant.cmd server
+
+ * _Linux_
+[source,shell]
+./bin/jqassistant.sh server
+
+Open a browser and navigate to http://localhost:7474.
