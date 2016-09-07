@@ -5,7 +5,7 @@
 == Get started
 
 Slizaa allows you to inspect and visualize the structure of an application, but it does neither scan nor store the structural information by itself. Instead, it uses jQAssistant (which in turn uses Neo4J)
-as it's backend. In order to setup slizaa, you First have to install and run jQAssistant (that is part 1 of this guide). Once jQAssistant is up and
+as it's backend. In order to setup slizaa, you have to install and run jQAssistant first (that is part 1 of this guide). Once jQAssistant is up and
 running, you can start slizaa and connect against the running jQAssistant server (that's part 2 of this guide).
 
 image::images/getting-started-1.svg[]
