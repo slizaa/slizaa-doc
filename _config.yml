@@ -3,13 +3,11 @@ url: http://www.slizaa.org
 
 #
 asciidoctor:
-  template_dir: _templates
+  template_dir: '_templates'
   attributes:
     - source-highlightercoderay
 
 # Build settings
 markdown: kramdown
-exclude: [gerd-wuetherich.de.iml]
-paginate: 2
-paginate_path: "/blog/page:num/"
-gems: [jekyll-paginate, jekyll-asciidoc]
+exclude: [slizaa-doc.iml]
+gems: [jekyll-asciidoc]
