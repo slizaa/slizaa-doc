@@ -6,13 +6,14 @@ layout: default
 <div class="container-fluid horizontal-section-container clearfix">
     <div class="row">
 
-        <div id="asciidoc-toc"  class="col-sm-3">
+        <div id="asciidoc-toc"  class="col-md-4">
             <div id="asciidoc-toc-box">
+                <h2>Table of contents</h2>
                 {{ page.document | tocify_asciidoc  }}
             </div>
         </div>
 
-        <div class="col-sm-9">
+        <div id="asciidoc-content" class="col-md-8">
 
             <!-- Main Page Content -->
             <div id="main-page-content" class="section-container main-page-content clearfix">
