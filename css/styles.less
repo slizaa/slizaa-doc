@@ -1,20 +1,91 @@
 @import "colour-definition.less";
 
+// asciidoc toc box
+
+#asciidoc-toc-box {
+
+  background-color: @colour-03;
+  padding: 0px 0px 10px 0px;
+
+  @media (min-width: 768px) {
+    margin: 40px 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  h2 {
+    padding-top: 4px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+
+  ul {
+    margin: 0px !important;
+    list-style-type: none;
+    padding-left: 10px !important;
+    &.sectlevel1 {
+      & > li {
+        margin-top: 10px;
+        & > a {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+
+
+//& > li {
+//
+//
+//  & > a {
+//    font-size: medium;
+//    font-weight: bold;
+//  }
+//}
+
+
+div#asciidoc-content {
+  padding-left: 20px !important;
+}
+
+
+
 @media (min-width: 768px) {
   .background-body {
     background-color: @colour-12;
   }
+
+  div#asciidoc-toc {
+    padding: 10px;
+    margin: 0px;
+    border-right: none;
+  }
+
+  div#asciidoc-content {
+    padding-left: 0px;
+  }
 }
 
-div#asciidoc-toc {
-  padding: 0px;
-  margin: 0px;
+
+
+
+div#asciidoc-toc-box ul.sectlevel2 > li > a {
+
 }
 
-div#asciidoc-toc-box {
-  background-color: @colour-03;
-  margin: 40px 20px;
-  padding: 10px 0px;
+// END ASCIIDOC TOC
+
+body {
+  font-family:open_sanslight, sans-serif;
+  font-size:13px;
+  line-height:1.8;
+}
+
+img.img-responsive {
+  display: block;
+  margin: auto;
 }
 
 p.footer-right {
@@ -57,7 +128,7 @@ th.download-th div {
   font-weight: normal;
 }
 
-td.download-td .btn  {
+td.download-td .btn {
   color: white;
   background-color: #879595;
   border: none;
@@ -76,12 +147,12 @@ li.menu-item i {
 }
 
 .breadcrumb > li + li::before {
-  font-family: "open_sansregular",sans-serif !important;
+  font-family: "open_sansregular", sans-serif !important;
   color: @colour-white !important;
 }
 
 .breadcrumb > li > a {
-  font-family: "open_sansregular",sans-serif !important;
+  font-family: "open_sansregular", sans-serif !important;
   color: @colour-white !important;
 }
 
@@ -101,29 +172,29 @@ h1.page_title {
   font-size: 1.6em;
 }
 
-ul.blog-tag-list>li>a {
+ul.blog-tag-list > li > a {
   border-radius: 5px;
 }
 
 .reference-item {
-    padding: 5px;
+  padding: 5px;
 }
 
 .reference-item-border {
-    border:1px solid @colour-medium-light;
-    width: 100%;
-    overflow: hidden;
-    text-align:center;
-    border-radius: 10px;
+  border: 1px solid @colour-medium-light;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .reference-item img {
-    margin: 0px;
-    padding: 0px;
-    vertical-align: middle;
-    horiz-align: center;
-    height: 100%;
-    width: auto;
+  margin: 0px;
+  padding: 0px;
+  vertical-align: middle;
+  horiz-align: center;
+  height: 100%;
+  width: auto;
 }
 
 .footer-contact {
@@ -131,42 +202,41 @@ ul.blog-tag-list>li>a {
 }
 
 .footer-contact-item {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .date_block {
-    display: inline-block;
-    font-family: "open_sanssemibold",sans-serif;
-    font-weight: normal;
-    color: @colour-really-dark;
-    background: transparent none repeat scroll 0% 0%;
+  display: inline-block;
+  font-family: "open_sanssemibold", sans-serif;
+  font-weight: normal;
+  color: @colour-really-dark;
+  background: transparent none repeat scroll 0% 0%;
 }
 
 .section-header.with-icon {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .kontakt_block {
-    display: inline-block;
-    font-family: "open_sansbold",sans-serif;
-    font-weight: normal;
-    text-transform: uppercase;
-    color: @colour-medium;
-    border: solid @colour-medium thin;
-    font-size: 0.71em;
-    line-height: 1;
-    padding: 4px 10px;
-    margin-bottom: 7px;
+  display: inline-block;
+  font-family: "open_sansbold", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: @colour-medium;
+  border: solid @colour-medium thin;
+  font-size: 0.71em;
+  line-height: 1;
+  padding: 4px 10px;
+  margin-bottom: 7px;
 }
 
 .reference-grid {
-    margin-top: 15px !important;
+  margin-top: 15px !important;
 }
 
-
 .custom-bullet li {
-    display: block;
+  display: block;
 }
 
 ul.posts > li {
