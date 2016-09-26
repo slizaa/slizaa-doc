@@ -2,12 +2,23 @@
 
 // asciidoc toc box
 
+#asciidoc-toc {
+  padding: 0px 10px 10px 10px;
+  border-right: none;
+  min-height: auto !important;
+
+  @media (min-width: 992px) {
+    padding-right: 0px;
+  }
+}
+
 #asciidoc-toc-box {
 
   background-color: @colour-03;
   padding: 0px 0px 10px 0px;
+  margin: 10px 10px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     margin: 40px 30px;
     padding-left: 10px;
     padding-right: 10px;
@@ -34,48 +45,27 @@
   }
 }
 
-
-
-//& > li {
-//
-//
-//  & > a {
-//    font-size: medium;
-//    font-weight: bold;
-//  }
-//}
-
-
-div#asciidoc-content {
-  padding-left: 20px !important;
+#asciidoc-content {
+  padding-left: 20px;
+  @media (min-width: 992px) {
+      padding-left: 0px;
+  }
 }
 
+// END ASCIIDOC TOC
 
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
+
   .background-body {
     background-color: @colour-12;
   }
 
-  div#asciidoc-toc {
-    padding: 10px;
-    margin: 0px;
-    border-right: none;
-  }
-
-  div#asciidoc-content {
-    padding-left: 0px;
-  }
 }
 
-
-
-
-div#asciidoc-toc-box ul.sectlevel2 > li > a {
-
+.no_left_padding {
+  padding-left: 0px;
 }
-
-// END ASCIIDOC TOC
 
 body {
   font-family:open_sanslight, sans-serif;
