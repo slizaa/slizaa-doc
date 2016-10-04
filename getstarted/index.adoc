@@ -4,7 +4,7 @@
 
 == Get started
 
-Slizaa allows you to inspect and visualize the structure of an application, but it does neither scan nor store the structural information by itself. Instead, it uses jQAssistant (which in turn uses Neo4J)
+slizaa allows you to inspect and visualize the structure of an application, but it does neither scan nor store the structural information by itself. Instead, it uses jQAssistant (which in turn uses Neo4J)
 as it's backend. In order to setup slizaa, you have to install and run jQAssistant first (that is part 1 of this guide). Once jQAssistant is up and
 running, you can start slizaa and connect against the running jQAssistant server (that's part 2 of this guide).
 
@@ -30,6 +30,10 @@ The structural information will be stored in a Neo4J graph database that is loca
  ./bin/jqassistant.sh scan -f lib -s jqassistant/myExampleDB
 
 === Enrich your application model
+The model created by the scanner represents the structure of a software project on a raw level. jQAssistant uses so called concept rules to enrich the database with higher level information to ease
+the process of writing queries. This typically means adding labels, properties or relations. While jQAssistant comes with a bunch of concepts to support different use cases, currently only the 'classpath'
+concept must be applied:
+
 [square]
  * _Windows_
 [source,shell]
@@ -45,11 +49,34 @@ Now you are ready to launch the jQAssistent server that hosts the structural inf
 [square]
  * _Windows_
 [source,shell]
-.\bin\jqassistant.cmd server
+.\bin\jqassistant.cmd server -s jqassistant/myExampleDB
 
  * _Linux_
 [source,shell]
-./bin/jqassistant.sh server
+./bin/jqassistant.sh server -s jqassistant/myExampleDB
 
-Open a browser and navigate to http://localhost:7474.
+To verify if your jQAssistant is up and running, open a browser and navigate to http://localhost:7474.
 
+image::images/neo4j-browser.png[Neo4j Browser,850]
+
+== Step 2: Install and run slizaa
+
+=== Install and start slizaa
+
+Download the latest slizaa distribution http://www.slizaa.org/download/[here]. The platform specific archive contains a directory 'slizaa' that must be unpacked in an arbitrary folder on your local disc. Start slizaa by double-clicking the slizaa executable that can be found in the slizaa installation directory.
+
+=== Connect to the local jQAssistant server
+Choose one of the following provided mappings:
+
+- Java mapping (flat packages)
+- Java mapping (hierarchical packages)
+
+image::images/slizaa-1.png[Slizaa,850]
+
+
+
+=== Inspecting dependencies
+
+image::images/slizaa-2.png[Slizaa, 850]
+
+image::images/slizaa-3.png[Slizaa, 850]
