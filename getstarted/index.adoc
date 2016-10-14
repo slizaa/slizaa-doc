@@ -8,7 +8,7 @@ slizaa allows you to inspect and visualize the structure of an application, but 
 as it's backend. In order to setup slizaa, you have to install and run jQAssistant first (that is part 1 of this guide). Once jQAssistant is up and
 running, you can start slizaa and connect against the running jQAssistant server (that's part 2 of this guide).
 
-image::images/getting-started-1.svg[]
+image::images/getting-started-1.svg[caption="Figure 1. ", title="Steps to install jQAssistant and slizaa"]
 
 == Step 1: Install and run jQAssistant
 
@@ -57,7 +57,7 @@ Now you are ready to launch the jQAssistent server that hosts the structural inf
 
 To verify if your jQAssistant is up and running, open a browser and navigate to http://localhost:7474.
 
-image::images/neo4j-browser.png[Neo4j Browser,850]
+image::images/neo4j-browser.png[Neo4j Browser,850, caption="Figure 2. ", title="The Neo4j browser"]
 
 == Step 2: Install and run slizaa
 
@@ -71,12 +71,12 @@ Choose one of the following provided mappings:
 - Java mapping (flat packages)
 - Java mapping (hierarchical packages)
 
-image::images/slizaa-1.png[Slizaa,850]
+image::images/slizaa-1.png[Slizaa,850, caption="Figure 3. ", title="Connect to the local jQAssistant server"]
 
 
 
 === Inspecting dependencies
 
-image::images/slizaa-2.png[Slizaa, 850]
+image::images/slizaa-2.png[Slizaa, 850, caption="Figure 4. ", title="Visualize dependencies in a dependency structure matrix (DSM)"]
 
-image::images/slizaa-3.png[Slizaa, 850]
+image::images/slizaa-3.png[Slizaa, 850, caption="Figure 5. ", title="Visualize dependencies as a graph"]
