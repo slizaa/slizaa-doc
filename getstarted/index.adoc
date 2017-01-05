@@ -12,22 +12,37 @@ image::images/getting-started-1.svg[caption="Figure 1. ", title="Steps to instal
 
 == Step 1: Install and run jQAssistant
 
+[NOTE]
+====
+[big]*Lazy? Use the preconfigured example database!*
+
+In the unlikely case the you don't want to scan your own application(s) yet, you can skip the entire first section by downloading a
+preconfigured jQAssistant distribution http://www.slizaa.org/downloads/jqassistant-1.1.3-examples.zip[here]. The provided distribution contains two preconfigured examples database:
+
+- _mapstruct_, which contains the structure information of Gunnar Morling's awesome java beans mapper (http://www.mapstruct.org), and
+- _eureka_, which contains structure information of Netflix' eureka service registry (https://github.com/Netflix/eureka).
+
+Simply unzip the content of the archive and start the graph database server by executing one of the contained scripts in the top level folder.
+====
+
 === Install jQAssistant
 
 Download the latest jQAssistant distribution http://jqassistant.org/wp-content/uploads/2016/04/jqassistant.distribution-1.1.3-bin.zip[here]. The archive contains a directory 'jqassistant.distribution-1.1.3' that must be unpacked in an arbitrary folder on your local disc.
 
+Further information regarding jQAssistant can be found at the http://jqassistant.org/[jQAssistant homepage, window="_blank"].
+
 === Scan you application
-Put all the JAR files (or WAR files) that belong to your application in the '<jQAssistant_install_dir>/lib' folder. The JAR files will be scanned during the scanning process using the following command.
-The structural information will be stored in a Neo4J graph database that is located in the specified directory (e.g. 'jqassistant/myExampleDB').
+Put all the JAR files (or WAR files) that belong to your application in the '<jQAssistant_install_dir>/myApp' folder. The JAR files will be scanned during the scanning process using the following command.
+The structural information will be stored in a Neo4J graph database that is located in the specified directory (e.g. 'jqassistant/myAppDB').
 
 [square]
 * _Windows_
 [source,shell]
- .\bin\jqassistant.cmd scan -f lib -s .\jqassistant\myExampleDB
+ .\bin\jqassistant.cmd scan -f myApp -s jqassistant\myAppDB
 
  * _Linux_
 [source,shell]
- ./bin/jqassistant.sh scan -f lib -s jqassistant/myExampleDB
+ ./bin/jqassistant.sh scan -f myApp -s jqassistant/myAppDB
 
 === Enrich your application model
 The model created by the scanner represents the structure of a software project on a raw level. jQAssistant uses so called concept rules to enrich the database with higher level information to ease
@@ -37,11 +52,11 @@ concept must be applied:
 [square]
  * _Windows_
 [source,shell]
-.\bin\jqassistant.cmd analyze -concepts classpath:Resolve -s jqassistant/myExampleDB
+.\bin\jqassistant.cmd analyze -concepts classpath:Resolve -s jqassistant\myAppDB
 
  * _Linux_
 [source,shell]
-./bin/jqassistant.sh analyze -concepts classpath:Resolve -s jqassistant/myExampleDB
+./bin/jqassistant.sh analyze -concepts classpath:Resolve -s jqassistant/myAppDB
 
 === Start the jQAssistant server
 Now you are ready to launch the jQAssistent server that hosts the structural information of the scanned application.
@@ -49,11 +64,11 @@ Now you are ready to launch the jQAssistent server that hosts the structural inf
 [square]
  * _Windows_
 [source,shell]
-.\bin\jqassistant.cmd server -s jqassistant/myExampleDB
+.\bin\jqassistant.cmd server -s jqassistant\myAppDB
 
  * _Linux_
 [source,shell]
-./bin/jqassistant.sh server -s jqassistant/myExampleDB
+./bin/jqassistant.sh server -s jqassistant/myAppDB
 
 To verify if your jQAssistant is up and running, open a browser and navigate to http://localhost:7474.
 
