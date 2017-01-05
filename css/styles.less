@@ -1,5 +1,29 @@
 @import "colour-definition.less";
 
+.admonitionblock {
+  border: solid thin #ccc;
+  background-color: #f5f5f5;
+  margin: 20px 0px;
+  padding: 10px;
+}
+
+.note {
+  td.icon {
+    border-right: solid thin #ccc;
+    padding-left: 30px;
+    padding-right: 50px;
+  }
+
+  td.content {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .big  {
+      font-size: large;
+    }
+  }
+}
+
 // asciidoc toc box
 
 #asciidoc-toc {
@@ -14,7 +38,7 @@
 
 #asciidoc-toc-box {
 
-  background-color: @colour-03;
+  background-color: #f5f5f5;
   padding: 0px 0px 20px 0px;
   margin: 10px 10px;
 
