@@ -15,7 +15,16 @@
 
         <ul id="main-menu">
             <li class="menu-item {% if current[1] == 'index.html' %}current-menu-ancestor{% endif %}"><a href="{{base}}/index.html"><i class="fa fa-home "></i>Home</a></li>
-            <li class="menu-item {% if current[1] == 'getstarted' %}current-menu-ancestor{% endif %}"><a href="{{base}}/getstarted"><i class="fa fa-terminal "></i>Get started</a></li>
+            <li class="menu-item {% if current[1] == 'documentation' %}current-menu-ancestor{% endif %}"><a href="#"><i class="fa fa-terminal "></i>Documentation</a>
+                <ul class="sub-menu">
+                    <li class="menu-item"><a href="{{base}}/documentation/what_is_slizaa.html">What is slizaa?</a></li>
+                    <li class="menu-item"><a href="{{base}}/documentation/getting_started.html">Getting started</a></li>
+                    <!--ul class="sub-sub-menu">
+                        <li class="menu-item"><a href="{{base}}/documentation/basic_concepts.html">Basic concepts</a></li>
+                        <li class="menu-item"><a href="{{base}}/documentation/getting_started.html">Getting started</a></li>
+                    </ul-->
+                </ul>
+            </li>
             <!--             <li class="menu-item {% if current[1] == 'documentation' %}current-menu-ancestor{% endif %}"><a href="{{base}}/documentation"><i class="fa fa-book "></i>Documentation</a></li> -->
             <li class="menu-item {% if current[1] == 'download' %}current-menu-ancestor{% endif %} menu-item-download"><a href="{{base}}/download"><i class="fa fa-download "></i>Download</a></li>
             <li class="menu-item {% if current[1] == 'kontakt' %}current-menu-ancestor{% endif %}"><a href="#"><i class="fa fa-code-fork "></i>Get involved</a>
