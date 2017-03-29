@@ -1,10 +1,13 @@
 = Getting started
 :page-layout: asciidoc
 :header_footer: false
+:icons: font
 
 = Getting started
 
 == Download and install
+
+NOTE: link:https://www.youtube.com/watch?v=i3QnYoP4NPQ[You can also watch this tutorial as a video on youtube!^]
 
 Download the latest slizaa distribution http://www.slizaa.org/download/[here]. The platform specific archive must be unpacked to an arbitrary folder on your local disc.
 Start slizaa by double-clicking the slizaa executable that can be found in the installation directory.
@@ -12,13 +15,16 @@ Start slizaa by double-clicking the slizaa executable that can be found in the i
 === Install jQAssistant support
 Out-of-the box you can connect against existing jQAssistant databases, e.g. a JQAssistant database that runs on your CI server.
 But if you want to scan your own software and create your own databases from within slizaa, you have to install the jQAssistant extension.
-To do this, open the Help menu and select "install slizaa extension" which opens the install extensions dialog (see Figure 2).
+Select `Help -> Install slizaa extensions...` to open the extensions dialog (see Figure 2).
 The extensions dialog shows all available extensions for slizaa. Select the extension you want to install and follow the steps provided in the wizard.
 Eclipse automatically restarts once the installation is complete.
 
 image::images/getting_started/install_extensions.png[caption="Figure 1. ", title="Install jQAssistant as an extension", width=550]
 
-== Creating software structure graphs with jQAssistant
+== Create software structure graphs with jQAssistant
+
+NOTE: link:https://www.youtube.com/watch?v=likqJbBHdKI[You can also watch this tutorial as a video on youtube!^]
+
 If you start slizaa for the first time,
 it opens the 'Graph Mapping' perspective as the default perspective (see figure 1).
 
@@ -31,49 +37,50 @@ image::images/getting_started/create_new_slizaa_project.png[caption="Figure 3. "
 
 Specify the name of your project in the new project wizard (e.g. my_example_project) and click Finish.
 
-=== Specifying a local JQAssistant database
-*Creating a database definition file.* To set up a new jQAssistant database, you have to define the database (or the database connection) in a _database definition file_.
+=== Specify a local JQAssistant database
+*Create a database definition file.* To set up a new jQAssistant database, you have to define the database (or the database connection) in a _database definition file_.
 To create a database definition file, right-click in the project explorer and select `New -> slizaa Database Definition File...` (see Figure 4)
 
 image::images/getting_started/creating_a_database_definition_file.png[caption="Figure 4. ", title="Creating a database definition file", width=700]
 
-*Selecting a template.* Once the file is created, you can select a database definition template using the key shortcut `CTRL-SPACE` (see Figure 5). To create a new local database, choose
+*Select a template.* Once the file is created, you can select a database definition template using the key shortcut `CTRL-SPACE` (see Figure 5). To create a new local database, choose
 the _Managed Local Database_ template.
 
 image::images/getting_started/database_definition_templates.png[caption="Figure 5. ", title="Database definition templates", width=950]
 
-*Specifying name and port.* In the template you have fill in the name of the software that you want to scan, as well as the port for the local jQAssistant server.
+*Specify name and port.* In the template you have fill in the name of the software that you want to scan, as well as the port for the local jQAssistant server.
 The storage directory for the local database and the directory that must contain the software to parse are automatically set with derived default values (see Figure 6).
 In this tutorial we will analyze the Eureka web archive.
 link:https://github.com/Netflix/eureka/[Eureka^] is a REST based service that is provided by Netflix and primarily used in the AWS cloud for locating services.
 
 image::images/getting_started/local_database_definition.png[caption="Figure 6. ", title="Managed local database definition", width=950]
 
-*Populating the scanning directory.* Finally you have to create the scanning directory that is specified in the database definition (the _files {...}_ section) and populate it with eureka web archive (see Figure 7).
+*Populate the scanning directory.* Finally you have to create the scanning directory that is specified in the database definition (the _files {...}_ section) and populate it with eureka web archive (see Figure 7).
 You can download the eureka web archive link:https://search.maven.org/remotecontent?filepath=com/netflix/eureka/eureka-server/1.4.10/eureka-server-1.4.10.war[here^].
 
 image::images/getting_started/create_eureka_directory.png[caption="Figure 7. ", title="Managed local database definition", width=300]
 
-=== Creating the software structure graph
+=== Create the software structure graph
 
-*Scanning the software.* Once you've created the database definition file, the database appears in the Graph Database view.
+*Scan the software.* Once you've created the database definition file, the database appears in the Graph Database view.
 To create the database and populate it with the software structure graph, right-click on the database icon to open the pop-up menu.
 Select `Scan` to scan the eureka web archive (see Figure 8).
 
 image::images/getting_started/scanning_software_1.png[caption="Figure 8. ", title="Database definition templates", width=500]
 
-*Enriching the model.* The model created by the scanner represents the structure of a software project on a raw level.
+*Enrich the model.* The model created by the scanner represents the structure of a software project on a raw level.
 jQAssistant uses so called concept rules to enrich the database with higher level information to ease the process of writing queries.
 This typically means adding labels, properties or relations.
 Select `Enrich` in the pop-up menu of the jQAssistant database to enrich the software structure graph (see Figure 9).
 
 image::images/getting_started/scanning_software_2.png[caption="Figure 9. ", title="Database definition templates", width=500]
 
-*Starting the database server.* Finally you have launch the jQAssistent database server that hosts the structural information of the scanned application.
+*Start the database server.* Finally you have launch the jQAssistent database server that hosts the structural information of the scanned application.
 Select `Start` in the pop-up menu of the jQAssistant database to start the server (see Figure 10).
 
 image::images/getting_started/scanning_software_3.png[caption="Figure 10. ", title="Database definition templates", width=500]
 
+////
 == Visualising software structure graphs
 
 image::images/getting_started/selecting_active_database.png[caption="Figure 11. ", title="Select the active database", width=300]
@@ -83,4 +90,4 @@ image::images/getting_started/creating_graphs_1.png[caption="Figure 12. ", title
 image::images/getting_started/creating_graphs_2.png[caption="Figure 13. ", title="The graph mapping selection dialog", width=450]
 
 image::images/getting_started/creating_graphs_3.png[caption="Figure 14. ", title="The mapped hierarchical graph", width=950]
-
+////
